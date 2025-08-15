@@ -8,6 +8,9 @@ g++ -std=c++17 -O3 main.cc -I. -o superpoints
 ```
 
 ### Execution
+
+To run the code from bash, simply do:
+
 ```bash
 FILE=test_data/xyzrgb_area5_voxelized_3cm.xyz
 RESOLUTION=1.0
@@ -17,6 +20,17 @@ RESOLUTION=1.0
 #./superpoints $FILE --resolution $RESOLUTION --save
 ```
 
+### Benchmarking from python with `Data` objects
+See `[benchmarking_vccs.ipynb](benchmarking_vccs.ipynb)` for converting 
+`Data` objects to `.xyz` files and for reading the output of the 
+`superpoints` program back to python, in view of oracle metrics 
+computation.
+
+---
+
+---
+
+---
 
 ## Introduction
 We present a simple but effective supervoxel segmentation method for point clouds, which formalizes supervoxel segmentation as a subset selection problem. We develop an heuristic algorithm that utilizes local information to efficiently solve the subset selection problem. The proposed method can produce supervoxels with adaptive resolutions, and dose not rely the selection of seed points. The method is fully tested on three publicly available point cloud segmentation benchmarks, which cover the major point cloud types. The experimental results show that compared with the state-of-the-art supervoxel segmentation methods, the supervoxels extracted using our method preserve the object boundaries and small structures more effectively, which is reflected in a higher boundary recall and lower under-segmentation error.
